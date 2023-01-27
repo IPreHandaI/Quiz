@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674844527 source:c:\xampp\htdocs\programação\colégio\atividade em aula\quiz\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

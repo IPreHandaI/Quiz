@@ -27,9 +27,7 @@ int main()
 
     ret = strncmp(inicio, respostaUsuario, 7);
 
-    if (ret > 0){
-        printf("O jogo terminou! sua pontuação foi de %d !", acertos);
-    }else if(ret < 0){
+    if (ret > 0 || ret < 0){
         printf("O jogo terminou! sua pontuação foi de %d !", acertos);
     }else{
         printf("Este e um jogo de perguntas e respostas, existem 3 niveis:\n ");
@@ -77,12 +75,7 @@ int main()
                     printf("%s\n", pMedio[i]);
                     scanf("%s", respostaUsuario);
                     ret = strncmp(rMedio[i], respostaUsuario, 7);
-                    if(ret < 0){
-                        printf("Voce errou!\n");
-                        sleep(1);
-                        chances++;
-                        erros++;
-                    }else if(ret > 0){
+                    if(ret < 0 || ret > 0){
                         printf("Voce errou!\n");
                         sleep(1);
                         chances++;
@@ -110,12 +103,7 @@ int main()
                     printf("%s\n", pDificil[i]);
                     scanf("%s", respostaUsuario);
                     ret = strncmp(rDificil[i], respostaUsuario, 7);
-                    if(ret < 0){
-                        printf("Voce errou!\n");
-                        sleep(1);
-                        chances++;
-                        erros++;
-                    }else if(ret > 0){
+                    if(ret < 0 || ret > 0){
                         printf("Voce errou!\n");
                         sleep(1);
                         chances++;

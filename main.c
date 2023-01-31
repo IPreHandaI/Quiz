@@ -49,12 +49,7 @@ int main()
                     printf("%s\n", pFacil[i]);
                     scanf("%s", respostaUsuario);
                     ret = strncmp(rFacil[i], respostaUsuario, 7);
-                    if(ret < 0){
-                        printf("Voce errou!\n");
-                        sleep(1);
-                        chances++;
-                        erros++;
-                    }else if(ret > 0){
+                    if(ret < 0 || ret > 0){
                         printf("Voce errou!\n");
                         sleep(1);
                         chances++;
@@ -79,9 +74,9 @@ int main()
             case 2:
                 for(i = 0; i <= 4; i++){
                     sleep(1);
-                    printf("%s\n", pFacil[i]);
+                    printf("%s\n", pMedio[i]);
                     scanf("%s", respostaUsuario);
-                    ret = strncmp(rFacil[i], respostaUsuario, 7);
+                    ret = strncmp(rMedio[i], respostaUsuario, 7);
                     if(ret < 0){
                         printf("Voce errou!\n");
                         sleep(1);
@@ -112,9 +107,9 @@ int main()
             case 3 :
                 for(i = 0; i <= 4; i++){
                     sleep(1);
-                    printf("%s\n", pFacil[i]);
+                    printf("%s\n", pDificil[i]);
                     scanf("%s", respostaUsuario);
-                    ret = strncmp(rFacil[i], respostaUsuario, 7);
+                    ret = strncmp(rDificil[i], respostaUsuario, 7);
                     if(ret < 0){
                         printf("Voce errou!\n");
                         sleep(1);
